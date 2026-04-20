@@ -1,0 +1,21 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# User-uploaded reference material (not source)
+uploads/
+
+# Node (only if you later add tooling)
+node_modules/
+package-lock.json

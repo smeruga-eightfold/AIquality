@@ -1,0 +1,308 @@
+/* =========================================================
+   Octuple Design System — Eightfold AI
+   Colors, type, radii, shadows, spacing
+   Source: EightfoldAI/octuple (src/styles/themes/_default-theme.scss)
+          + Figma "Octuple design system.fig"
+   ========================================================= */
+
+/* Source Sans Pro — the real Octuple body font (from _fonts.scss) */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+/* Material Design Icons (same font Octuple uses in-product) */
+@import url('https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css');
+
+/* Gilroy — brand / display font (uploaded OTFs) */
+@font-face{font-family:'Gilroy';font-weight:100;font-style:normal;src:url('fonts/Gilroy-Thin.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:100;font-style:italic;src:url('fonts/Gilroy-ThinItalic.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:200;font-style:normal;src:url('fonts/Gilroy-UltraLight.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:200;font-style:italic;src:url('fonts/Gilroy-UltraLightItalic.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:300;font-style:normal;src:url('fonts/Gilroy-Light.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:300;font-style:italic;src:url('fonts/Gilroy-LightItalic.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:400;font-style:normal;src:url('fonts/Gilroy-Regular.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:400;font-style:italic;src:url('fonts/Gilroy-RegularItalic.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:500;font-style:normal;src:url('fonts/Gilroy-Medium.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:500;font-style:italic;src:url('fonts/Gilroy-MediumItalic.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:600;font-style:normal;src:url('fonts/Gilroy-SemiBold.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:600;font-style:italic;src:url('fonts/Gilroy-SemiBoldItalic.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:700;font-style:normal;src:url('fonts/Gilroy-Bold.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:700;font-style:italic;src:url('fonts/Gilroy-BoldItalic.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:800;font-style:normal;src:url('fonts/Gilroy-ExtraBold.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:800;font-style:italic;src:url('fonts/Gilroy-ExtraBoldItalic.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:900;font-style:normal;src:url('fonts/Gilroy-Heavy.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:900;font-style:italic;src:url('fonts/Gilroy-HeavyItalic.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:950;font-style:normal;src:url('fonts/Gilroy-Black.otf') format('opentype')}
+@font-face{font-family:'Gilroy';font-weight:950;font-style:italic;src:url('fonts/Gilroy-BlackItalic.otf') format('opentype')}
+
+:root {
+  /* ─── Neutral / Grey scale ─── */
+  --grey-10:  #f6f7f8;
+  --grey-20:  #d9dce1;
+  --grey-30:  #bdc1c9;
+  --grey-40:  #a1a6b1;
+  --grey-50:  #858b98;
+  --grey-60:  #69717f;
+  --grey-70:  #4f5666;
+  --grey-80:  #343c4c;
+  --grey-90:  #1a212e;
+  --grey-100: #05070a;
+
+  /* ─── Primary / Blue (links, CTAs) ─── */
+  --primary-10: #ebf7ff;  --blue-10: #ebf7ff;
+  --primary-20: #bce4ff;  --blue-20: #bce4ff;
+  --primary-30: #8ed0fa;  --blue-30: #8ed0fa;
+  --primary-40: #68baef;  --blue-40: #68baef;
+  --primary-50: #47a4df;  --blue-50: #47a4df;
+  --primary-60: #2c8cc9;  --blue-60: #2c8cc9;   /* graphics */
+  --primary-70: #146da6;  --blue-70: #146da6;   /* text */
+  --primary-80: #054d7b;  --blue-80: #054d7b;   /* extra high contrast */
+  --primary-90: #002a47;  --blue-90: #002a47;
+  --primary-100:#00060a;  --blue-100:#00060a;
+
+  /* ─── Blue-violet (AI agent, primary accent in Figma) ─── */
+  --blueviolet-10: #f1f2ff;
+  --blueviolet-20: #cacffc;
+  --blueviolet-30: #a9b0f5;
+  --blueviolet-40: #8c95e8;
+  --blueviolet-50: #757ed6;
+  --blueviolet-60: #5962b7;
+  --blueviolet-70: #414996;
+  --blueviolet-80: #2b3271;
+  --blueviolet-90: #191d4a;
+  --blueviolet-100:#090b1f;
+
+
+
+  /* ─── Blue-green / cyan (secondary) ─── */
+  --bluegreen-10: #ebfdff;
+  --bluegreen-20: #b0f3fe;
+  --bluegreen-30: #7be4f4;
+  --bluegreen-40: #50cee1;
+  --bluegreen-50: #2db3c7;
+  --bluegreen-60: #1999ac;
+  --bluegreen-70: #0b7b8b;
+  --bluegreen-80: #025966;
+  --bluegreen-90: #00333b;
+
+  /* ─── Green (success / positive) ─── */
+  --green-10: #f0fefa;
+  --green-20: #b9f4e4;
+  --green-30: #8ce1ca;
+  --green-40: #67c5ac;
+  --green-50: #51ab93;
+  --green-60: #3d8f79;
+  --green-70: #2b715f;
+  --green-80: #1b5143;
+  --green-90: #0e2e26;
+  --green-100:#030a08;
+
+  /* ─── Red (disruptive / error) ─── */
+  --red-10: #ffefef;
+  --red-20: #ffc6c6;
+  --red-30: #ffa3a3;
+  --red-40: #f48686;
+  --red-50: #e46f6f;
+  --red-60: #c15151;
+  --red-70: #993838;
+  --red-80: #6c2222;
+  --red-90: #3b1010;
+  --red-100:#0a0202;
+
+  /* ─── Red-orange ─── */
+  --redorange-10: #fff2ed;
+  --redorange-20: #ffd1bd;
+  --redorange-30: #ffb396;
+  --redorange-40: #ff9977;
+  --redorange-50: #f8845f;
+  --redorange-60: #d26743;
+  --redorange-70: #a54d2c;
+  --redorange-80: #78351a;
+
+  /* ─── Orange (warning) ─── */
+  --orange-10: #fff8eb;
+  --orange-20: #ffe3b0;
+  --orange-30: #ffcd78;
+  --orange-40: #ffb650;
+  --orange-50: #f29d31;
+  --orange-60: #c97e19;
+  --orange-70: #9d6309;
+  --orange-80: #6c4500;
+  --orange-90: #3b2600;
+
+  /* ─── Yellow-green ─── */
+  --yellowgreen-10: #fdfeeb;
+  --yellowgreen-20: #f3f5b0;
+  --yellowgreen-30: #e2e575;
+  --yellowgreen-40: #cacd46;
+  --yellowgreen-50: #abae1f;
+  --yellowgreen-60: #858707;
+  --yellowgreen-70: #6d6f00;
+  --yellowgreen-80: #525400;
+
+  /* ─── Violet / Violet-red (info / visited) ─── */
+  --violet-10: #fff0f9;
+  --violet-20: #fcc8e7;
+  --violet-30: #f3a5d4;
+  --violet-40: #e688c0;
+  --violet-50: #d36fab;
+  --violet-60: #b5548e;
+  --violet-70: #943d71;
+  --violet-80: #702853;
+  --violet-90: #491635;
+
+  /* Legacy violet (old magenta) */
+  --violet-legacy-60: #975590;
+  --violet-legacy-70: #7e3a77;
+
+  /* ─── Semantic aliases ─── */
+  --background-color:   #ffffff;
+  --text-primary:       var(--grey-90);
+  --text-secondary:     var(--grey-70);
+  --text-tertiary:      var(--grey-60);
+  --text-inverse:       #ffffff;
+  --border-color:       #bec2ca;
+
+  --success-color:      var(--green-70);
+  --success-bg:         var(--green-10);
+  --success-border:     var(--green-60);
+  --warning-color:      var(--orange-70);
+  --warning-bg:         var(--orange-10);
+  --warning-border:     var(--orange-60);
+  --error-color:        var(--red-70);
+  --error-bg:           var(--red-10);
+  --error-border:       var(--red-60);
+
+  --link-color:         var(--primary-70);
+  --link-hover:         #002a47;      /* primary-90 */
+  --link-visited:       var(--violet-70);
+
+  --focus-ring:         #757ed6;     /* blueviolet-50 */
+
+  /* Brand gradient — the canonical Eightfold logo gradient */
+  --eightfold-gradient: linear-gradient(90deg,
+    #3186c8 0.01%, #269fca 18.01%, #1db4cc 38.02%,
+    #1abbcd 50.02%, #6fc6aa 100.03%);
+
+  /* ─── Type ─── */
+  --font-family:        'Source Sans Pro';
+  --font-stack:         -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                        Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  --font-stack-full:    var(--font-family), var(--font-stack);
+  /* Display / brand type (Gilroy — uploaded OTFs) */
+  --font-display:       'Gilroy', var(--font-stack);
+  --font-icon:          'Material Design Icons';
+
+  --fw-light:      300;
+  --fw-regular:    400;
+  --fw-semibold:   600;
+  --fw-bold:       700;
+
+  --fs-1: 12px;   --lh-1: 16px;
+  --fs-2: 14px;   --lh-2: 20px;
+  --fs-3: 16px;   --lh-3: 24px;
+  --fs-4: 18px;   --lh-4: 28px;
+  --fs-5: 20px;   --lh-5: 32px;
+  --fs-6: 24px;   --lh-6: 40px;
+  --fs-7: 32px;   --lh-7: 48px;
+  --fs-8: 40px;   --lh-8: 64px;
+  --fs-9: 64px;   --lh-9: 72px;
+  --fs-10: 96px;  --lh-10: 112px;
+
+  --track-xs: -0.16px;
+  --track-s:  -0.24px;
+  --track-m:  -0.32px;
+  --track-l:  -0.48px;
+
+  /* ─── Radii (from _default-theme.scss) ─── */
+  --radius-xs:    2px;
+  --radius-s:     4px;
+  --radius-m:     8px;
+  --radius-l:     16px;
+  --radius-xl:    24px;
+  --radius-pill:  999px;
+  --radius-round: 50%;
+
+  /* ─── Elevation / shadows ─── */
+  --shadow-xs: 0 1px 2px rgba(15,20,31,0.12);
+  --shadow-s:  0 1px 2px rgba(15,20,31,0.12), 0 1px 4px rgba(15,20,31,0.16);
+  --shadow-m:  0 1px 2px rgba(15,20,31,0.12), 0 2px 8px rgba(15,20,31,0.16);
+  --shadow-l:  0 1px 2px rgba(15,20,31,0.12), 0 4px 16px rgba(15,20,31,0.16);
+  --shadow-xl: 0 1px 2px rgba(15,20,31,0.12), 0 8px 32px rgba(15,20,31,0.16);
+  --shadow-focus: 0 0 0 2px var(--focus-ring);
+
+  /* ─── Spacing (4px base) ─── */
+  --space-xxxs: 2px;
+  --space-xxs:  4px;
+  --space-xs:   8px;
+  --space-s:    12px;
+  --space-m:    16px;
+  --space-ml:   20px;
+  --space-l:    24px;
+  --space-xl:   32px;
+  --space-xxl:  40px;
+  --space-xxxl: 64px;
+
+  /* ─── Motion ─── */
+  --dur-xfast: 200ms;
+  --dur-fast:  400ms;
+  --dur-base:  600ms;
+  --dur-slow:  800ms;
+  --ease-out:     cubic-bezier(0, 0, 0.58, 1);
+  --ease-in:      cubic-bezier(0.42, 0, 1, 1);
+  --ease-in-out:  cubic-bezier(0.42, 0, 0.58, 1);
+
+  /* Layout */
+  --layout-header-height: 80px;
+  --layout-nav-height:    60px;
+
+  /* Inputs */
+  --input-height-s: 28px;
+  --input-height-m: 36px;
+  --input-height-l: 44px;
+
+  --disabled-alpha: 0.3;
+}
+
+/* =========================================================
+   Semantic selectors
+   ========================================================= */
+
+html, body {
+  background: var(--background-color);
+  color: var(--text-secondary);
+  font-family: var(--font-stack-full);
+  font-size: var(--fs-3);
+  line-height: var(--lh-3);
+  font-weight: var(--fw-regular);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, .h1 {
+  font-family: var(--font-stack-full);
+  font-size: var(--fs-7); line-height: var(--lh-7);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--track-m);
+  color: var(--text-primary);
+  margin: 0;
+}
+h2, .h2 {
+  font-size: var(--fs-6); line-height: var(--lh-6);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--track-s);
+  color: var(--text-primary); margin: 0;
+}
+h3, .h3 {
+  font-size: var(--fs-5); line-height: var(--lh-5);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary); margin: 0;
+}
+h4, .h4 {
+  font-size: var(--fs-4); line-height: var(--lh-4);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary); margin: 0;
+}
+p  { font-size: var(--fs-3); line-height: var(--lh-3); color: var(--text-secondary); margin: 0; }
+small, .caption { font-size: var(--fs-1); line-height: var(--lh-1); color: var(--text-tertiary); }
+a  { color: var(--link-color); text-decoration: none; font-weight: var(--fw-semibold); }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+
+.display-l { font-family: var(--font-display); font-size: var(--fs-10); line-height: var(--lh-10); font-weight: var(--fw-light); letter-spacing: var(--track-l); color: var(--text-primary); }
+.display-m { font-family: var(--font-display); font-size: var(--fs-9);  line-height: var(--lh-9);  font-weight: var(--fw-regular);  letter-spacing: var(--track-l); color: var(--text-primary); }
